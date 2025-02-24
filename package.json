@@ -1,0 +1,19 @@
+{
+  "name": "artillery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:optimized": "node server-optimized.js",
+    "test": "artillery run load-test.yml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "redis": "^4.7.0"
+  }
+}
