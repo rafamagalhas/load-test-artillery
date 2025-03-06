@@ -1,0 +1,9 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 30
+      arrivalRate: 10  # 10 requisições por segundo
+scenarios:
+  - flow:
+      - get:
+          url: "/users-fast"
