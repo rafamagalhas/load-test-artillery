@@ -1,0 +1,18 @@
+config:
+  target: 'https://httpbin.org'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+  processor: './src/helpers/helpers.js'
+  variables:
+    messageLength: 8
+scenarios:
+  - flow:
+      - function: "randomMessagingSessionId"
+      - log: 'Iniciando o teste do processador'
+      - get:
+          url: '/get'
+          headers:
+            Random-Header: "{{ messagingSessionId }}"
+      - log: "{{ messagingSessionId }}"
+      - log: 'Finalizando o teste do processador'
